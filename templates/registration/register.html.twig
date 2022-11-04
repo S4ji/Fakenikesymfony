@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+    <section class ="">
+       
+    {{ form_start(registrationForm) }}
+        <fieldset>
+        <legend>Login Informations</legend>
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        </fieldset>
+        <fieldset>
+        <legend>Personal Informations</legend>
+        {{ form_row(registrationForm.lastname) }}
+        {{ form_row(registrationForm.firstname) }}
+        {{ form_row(registrationForm.adress) }}
+        {{ form_row(registrationForm.zipcode) }}
+        {{ form_row(registrationForm.city) }}
+        <fieldset>
+        
+        {{ form_row(registrationForm.RGPDConsent) }}
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }}
+    </section>
+{% endblock %}

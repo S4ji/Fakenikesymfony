@@ -1,0 +1,40 @@
+    <header class="container">
+        <div class="usernav">
+        {% if app.user %}
+             <a href="{{path('app_logout')}}">Logout</a>
+            {% else %}
+            <a href="{{path('app_login')}}">Login</a>
+            <a href="{{path('app_register')}}">Register</a>
+            {% endif %}
+        </div>
+        <div class="topheader">
+            <a href="{{path('app_home')}}" class="logo"><img src="img/nike-xxl.png" alt="Logo Nike"></a>
+           <div class="rightTopoMenu">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="openNavBtn">&#9776;</span>
+           </div> 
+            
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Societé</a></li>
+                <li><a href="#">SAV</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" id="closeNavBtn" class="closeNavBtn">&times;</a>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">Societé</a></li>
+            <li><a href="#">SAV</a></li>
+        </ul>
+    </div>
+    <div>
+    <main class="container" id="main">

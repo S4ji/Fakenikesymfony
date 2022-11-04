@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<h2>Vente Express Nike</h2>
+        {# <?php foreach($myProducts as $product):?> #}
+            <article class="cardproduct">
+                <h3><?=$product->nom ?></h3>
+                <img src="<?=$product->image ?>" alt="image de <?=$product->nom ?>">
+                <h4><?=$product->prix ?></h4>
+                <P><?=$product->description ?></P>
+                <a href="">Voir ce Produit</a></p>
+            </article>
+        <?php endforeach; ?>
+{% endblock %}
